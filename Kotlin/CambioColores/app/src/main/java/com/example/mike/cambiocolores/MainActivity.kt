@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+    /*
         btnWhite.setOnClickListener {
             toast("White")
             layoutPrincipal.setBackgroundColor(Color.WHITE)
@@ -21,8 +23,16 @@ class MainActivity : AppCompatActivity() {
                 _ -> toast("REd")
             layoutPrincipal.setBackgroundColor(Color.RED)
         })
+    */
+        btnWhite.setOnClickListener {
+            layoutPrincipal.setBackgroundColor(Color.WHITE)
+        }
+
+        btnRed.setOnClickListener {
+            layoutPrincipal.setBackgroundColor(Color.RED)
+        }
     }
 
-    private fun toast(text: String, duration: Int = Toast.LENGTH_LONG) = Toast.makeText(this@MainActivity, text, Toast.LENGTH_LONG).show()
+    //private fun toast(text: String, duration: Int = Toast.LENGTH_LONG) = Toast.makeText(this@MainActivity, text, Toast.LENGTH_LONG).show()
 
 }
