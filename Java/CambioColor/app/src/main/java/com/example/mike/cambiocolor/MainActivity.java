@@ -20,4 +20,6 @@ public class MainActivity extends AppCompatActivity {
         this.layoutPrincipal.setBackgroundColor(Color.RED);
     }
 
+    public void changeWhite(View view) { this.layoutPrincipal.setBackgroundColor(Color.WHITE);}
+
 }
