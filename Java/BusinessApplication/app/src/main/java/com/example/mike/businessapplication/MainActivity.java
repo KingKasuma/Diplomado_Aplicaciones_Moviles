@@ -1,5 +1,6 @@
 package com.example.mike.businessapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,12 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
+    private TextView txtSelected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.txtSelected = (TextView) findViewById(R.id.textView);
     }
 
     public void changeButton(View view){
@@ -45,6 +48,15 @@ public class MainActivity extends AppCompatActivity {
                 Button button5 = findViewById(R.id.button5);
                 textView.setText(button5.getText());
                 break;
+        }
+    }
+
+    public void selectButton(View view){
+        if(view.getId() == R.id.button3){
+            Intent i = new Intent(this, ServiciosActivity.class);
+            startActivity(i);
+        }else if(view.getId()==R.id.button2){
+            this.txtSelected.setText("Portafolio");
         }
     }
 }
